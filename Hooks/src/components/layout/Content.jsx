@@ -8,6 +8,7 @@ import { UseMyHook } from '../../views/examples/UseMyHook';
 import { UseContext } from '../../views/examples/UserContext';
 import { UseRef } from '../../views/examples/UseRef';
 import { UseReduce } from '../../views/examples/UserReducer';
+import { UseState } from '../../views/examples/UseState';
 import './content.css';
 
 const Content = props => (
@@ -23,6 +24,7 @@ const Content = props => (
       <Route path="/usecontext" element={<UseContext /> } />
       <Route path="/useref" element={<UseRef /> } />
       <Route path="/usereduce" element={<UseReduce /> } />
+      <Route path="/usestate" element={<UseState /> } />
       <Route path="*" element={<NotFound />}/>
 
     </Routes>

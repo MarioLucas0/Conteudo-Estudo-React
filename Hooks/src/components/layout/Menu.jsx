@@ -31,6 +31,9 @@ const Menu = props => (
         <li>
           <Link to="/usereduce">useReduce</Link>
         </li>
+        <li>
+          <Link to="/usestate">useState</Link>
+        </li>
       </ul>
     </nav>
   </main>

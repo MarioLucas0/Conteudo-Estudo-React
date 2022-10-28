@@ -4,7 +4,7 @@
 export const UseEffect = props => (
     
   <div className="useeffect">
-     <h1>UseMyHook </h1>
+     <h1>UseEffect </h1>
   </div>
 
   

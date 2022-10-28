@@ -1,4 +1,3 @@
-import './home.css';
 
 
 export const UseContext = props => (
