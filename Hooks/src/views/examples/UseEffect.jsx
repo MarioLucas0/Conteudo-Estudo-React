@@ -11,21 +11,25 @@ function calcFatorial(num) {
 
 export const UseEffect = (props) => {
 
-    // Ex #01
+
     const [number, setNumber] = useState(1)
     const [fatorial, setFatorial] = useState(1)
     const [status, setStatus] = useState("Ímpar")
 
+  /* A hook that is called every time the number changes. */
     useEffect(function() {
         setFatorial(calcFatorial(number))
     }, [number])
 
+  
+ /* Changing the title of the page when the fatorial is greater than 1 million. */
     useEffect(function() {
         if(fatorial > 1000000) {
             document.title = "Eita!!!"
         }
     }, [fatorial])
 
+ /* A hook that is called every time the number changes. */
     useEffect(() => {
         setStatus(number %  2 === 0 ? "Par" : "Impar")
     },[number])
