@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from '../../components/layout/SectionTitle'
 
@@ -9,7 +9,7 @@ function calcFatorial(num) {
     return calcFatorial(n - 1) * n
 }
 
-export const UseEffect = (props) => {
+const UseEffect = (props) => {
 
     // Ex #01
     const [number, setNumber] = useState(1)
@@ -60,4 +60,4 @@ export const UseEffect = (props) => {
     )
 }
 
-
+export default UseEffect

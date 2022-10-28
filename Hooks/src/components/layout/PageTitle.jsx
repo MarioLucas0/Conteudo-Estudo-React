@@ -1,12 +1,11 @@
+import './PageTitle.css'
+import React from 'react'
 
-export const PageTitle = ({title,subtitle}) => (
-    
-  <div className="usereduce">
-    
-     <h1>{title}</h1>
-     <h1>{subtitle}</h1>
+const PageTitle = props => (
+    <div className={`PageTitle ${props.error ? "error" : ""}`}>
+        <h1>{props.title}</h1>
+        <h2>{props.subtitle}</h2>
+    </div>
+)
 
-  </div>
-
-  
-);
+export default PageTitle

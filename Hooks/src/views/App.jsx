@@ -1,6 +1,8 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import Content from '../components/layout/Content';
 import Menu from '../components/layout/Menu';
+
+
 import './App.css';
 import { UseCallback } from './examples/UseCallback';
 import { UseCustom } from './examples/UseCustom';
@@ -10,14 +12,16 @@ import { UseMyHook } from './examples/UseMyHook';
 import { UseContext } from './examples/UserContext';
 import { UseRef } from './examples/UseRef';
 import { UseReduce } from './examples/UserReducer';
+import { UseState } from './examples/UseState';
 
 
-const App = props => (
+export const App = props => (
     
   <div className="app">
     <Router>
       <Menu />
       <Content >
+
         <UseCallback />
         <UseContext />
         <UseCustom />
@@ -26,10 +30,11 @@ const App = props => (
         <UseMyHook />
         <UseReduce />
         <UseRef />
+        <UseState />
         </Content> 
+        
     </Router>
  
   </div>
 );
 
-export default App;

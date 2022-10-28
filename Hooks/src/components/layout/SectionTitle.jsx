@@ -1,11 +1,10 @@
-export const SectionTitle = (props) => (
-    
-  <div className="usereduce">
-    
-     <h1>{props.title}</h1>
- 
+import './SectionTitle.css'
+import React from 'react'
 
-  </div>
+const SectionTitle = props => (
+    <div className="SectionTitle">
+        <h3>{props.title}</h3>
+    </div>
+)
 
-  
-);
+export default SectionTitle

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { PageTitle } from "../../components/layout/PageTitle";
-import { SectionTitle } from "../../components/layout/SectionTitle";
+import PageTitle from "../../components/layout/PageTitle";
+import SectionTitle from "../../components/layout/SectionTitle";
 
 
 export const UseState = (props) => {
