@@ -1,13 +1,19 @@
 import { useCallback, useState } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
-//import UseCallbackButtons from './UseCallbackButtons'
+import UseCallbackButtons from './UseCallbackButtons'
 
+/**
+ * `useCallback` returns a memoized callback
+ * @returns A memoized function.
+ */
 
 export const UseCallback = props => {
+    
     const [count, setCount] = useState(0)
     
+/* Creating a memoized function. */
     const inc = useCallback(function (delta) {
-        setCount(curr => curr + delta)
+        setCount(current => current + delta)
     }, [setCount])
 
     return (
@@ -18,7 +24,7 @@ export const UseCallback = props => {
 
             <div className="center">
                 <span className="text">{count}</span>
-              {/*   <UseCallbackButtons inc={inc} /> */}
+                <UseCallbackButtons inc={inc} />
             </div>
         </div>
     )
