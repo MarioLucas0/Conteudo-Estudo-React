@@ -1,35 +1,53 @@
-import { Route, Routes } from 'react-router-dom';
-import NotFound from '../../views/examples/NotFound';
-import { UseCallback } from '../../views/examples/UseCallback';
-import { UseCustom } from '../../views/examples/UseCustom';
-import { UseEffect } from '../../views/examples/UseEffect';
-import { UseMemo } from '../../views/examples/UseMemo';
-import { UseMyHook } from '../../views/examples/UseMyHook';
-import { UseContext } from '../../views/examples/UserContext';
-import { UseRef } from '../../views/examples/UseRef';
-import { UseReduce } from '../../views/examples/UserReducer';
-import { UseState } from '../../views/examples/UseState';
-import './content.css';
+import './Content.css'
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+
+import Home from '../../views/examples/Home'
+import NotFound from '../../views/examples/NotFound'
+import UseState from '../../views/examples/UseState'
+import UseEffect from '../../views/examples/UseEffect'
+import UseRef from '../../views/examples/UseRef'
+import UseCallback from '../../views/examples/UseCallback'
+import UseMemo from '../../views/examples/UseMemo'
+import UseContext from '../../views/examples/UseContext'
+import UseReducer from '../../views/examples/UseReducer'
+import UseCustom from '../../views/examples/UseCustom'
 
 const Content = props => (
-    
-  <aside className="content">
+    <main className="Content">
+        <Switch>
+            <Route exact path="/">
+                <Home />
+            </Route>
+            <Route path="/useState">
+                <UseState />
+            </Route>
+            <Route path="/useEffect">
+                <UseEffect />
+            </Route>
+            <Route path="/useRef">
+                <UseRef />
+            </Route>
+            <Route path="/useCallback">
+                <UseCallback />
+            </Route>
+            <Route path="/useMemo">
+                <UseMemo />
+            </Route>
+            <Route path="/useContext">
+                <UseContext />
+            </Route>
+            <Route path="/useReducer">
+                <UseReducer />
+            </Route>
+            <Route path="/useCustom">
+                <UseCustom />
+            </Route>
+            <Route path="*">
+                <NotFound />
+            </Route>
+        </Switch>
+    </main>
+)
 
-    <Routes>
-      <Route path="/usecallback" element={<UseCallback />} />
-      <Route path="/usecustom" element={ <UseCustom /> } />
-      <Route path="/useeffect" element={<UseEffect /> } />
-      <Route path="/usememo" element={<UseMemo />} />
-      <Route path="/usemyhook" element={<UseMyHook /> } />
-      <Route path="/usecontext" element={<UseContext /> } />
-      <Route path="/useref" element={<UseRef /> } />
-      <Route path="/usereduce" element={<UseReduce /> } />
-      <Route path="/usestate" element={<UseState /> } />
-      <Route path="*" element={<NotFound />}/>
-
-    </Routes>
-  
-  </aside>
-);
-
-export default Content;
+export default Content

@@ -1,19 +1,13 @@
-import { useCallback, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 import UseCallbackButtons from './UseCallbackButtons'
 
-/**
- * `useCallback` returns a memoized callback
- * @returns A memoized function.
- */
 
-export const UseCallback = props => {
-    
+const UseCallback = props => {
     const [count, setCount] = useState(0)
     
-/* Creating a memoized function. */
     const inc = useCallback(function (delta) {
-        setCount(current => current + delta)
+        setCount(curr => curr + delta)
     }, [setCount])
 
     return (
@@ -30,3 +24,4 @@ export const UseCallback = props => {
     )
 }
 
+export default UseCallback

@@ -1,32 +1,25 @@
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from '../../components/layout/SectionTitle'
 
-/**
- * It takes two strings and merges them together.
- *  @returns a string that is the result of merging two strings.
- */
 const merge = function(s1, s2) {
     return [...s1].map((e, i) => `${e}${s2[i] || ""}`).join("")
 }
 
-export const UseRef = props => {
+const UseRef = props => {
     const [value1, setValue1] = useState("")
     const [value2, setValue2] = useState("")
     
-
     const count = useRef(0)
     const myInput1 = useRef(null)
     const myInput2 = useRef(null)
 
-/* A hook that is called every time the value1 changes. */
     useEffect(function() {
         count.current = count.current + 1
         myInput2.current.focus()
     }, [value1])
     
-/* A hook that is called every time the value2 changes. */
-     useEffect(function() {
+    useEffect(function() {
         count.current++
         myInput1.current.focus()
     }, [value2])
@@ -42,7 +35,6 @@ export const UseRef = props => {
             <div className="center">
                 <div>
                     <span className="text">Valor: </span>
-                 {/*  Merging the two strings and adding a space between them.  */}
                     <span className="text">{merge(value1, value2)} [</span>
                     <span className="text red">{count.current}</span>
                     <span className="text">]</span>
@@ -63,3 +55,4 @@ export const UseRef = props => {
     )
 }
 
+export default UseRef

@@ -1,40 +1,28 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import Content from '../components/layout/Content';
-import Menu from '../components/layout/Menu';
+import './App.css'
+import React, { useState } from 'react'
+import { BrowserRouter as Router } from  'react-router-dom'
 
+import Menu from '../components/layout/Menu'
+import Content from '../components/layout/Content'
 
-import './App.css';
-import { UseCallback } from './examples/UseCallback';
-import { UseCustom } from './examples/UseCustom';
-import { UseEffect } from './examples/UseEffect';
-import { UseMemo } from './examples/UseMemo';
-import { UseMyHook } from './examples/UseMyHook';
-import { UseContext } from './examples/UserContext';
-import { UseRef } from './examples/UseRef';
-import { UseReduce } from './examples/UserReducer';
-import { UseState } from './examples/UseState';
+import DataContext, { data } from '../data/DataContext'
+import Store from '../data/Store'
 
+const App = props => {
+    const [state, setState] = useState(data)
 
-export const App = props => (
-    
-  <div className="app">
-    <Router>
-      <Menu />
-      <Content >
+    return (
+        <Store>
+            <DataContext.Provider value={{state, setState}}>
+                <div className="App">
+                    <Router>
+                        <Menu />
+                        <Content />
+                    </Router>
+                </div>
+            </DataContext.Provider>
+        </Store>
+    )
+}
 
-        <UseCallback />
-        <UseContext />
-        <UseCustom />
-        <UseEffect />
-        <UseMemo />
-        <UseMyHook />
-        <UseReduce />
-        <UseRef />
-        <UseState />
-        </Content> 
-        
-    </Router>
- 
-  </div>
-);
-
+export default App

@@ -1,32 +1,38 @@
-.menu {
-  display: flex;
-  flex-basis: 250px;
+.Menu {
+    display: flex;
+    flex-basis: 250px;
 
-  background-color: dodgerblue;
-}
-.menu nav {
-  flex: 1;
-}
-
-.menu ul {
-  list-style: none;
-  padding: 0;
+    background: linear-gradient(to top, #00b4db, #006c90);
+    
+    z-index: 1;
+    -webkit-box-shadow: 4px 0px 17px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 0px 17px -5px rgba(0,0,0,0.75);
+    box-shadow: 4px 0px 17px -5px rgba(0,0,0,0.75);
 }
 
-.menu li {
-  display: flex;
+.Menu nav {
+    flex-grow: 1;
 }
 
-.menu li a {
-  flex: 1;
-  padding: 10px;
-  margin-bottom: 10px;
-
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.5rem;
+.Menu ul {
+    list-style: none;
+    padding: 0;
 }
 
-.menu li a:hover {
-  background-color:  #00000030;
+.Menu li {
+    display: flex;
+}
+
+.Menu li a {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.Menu li a:hover {
+    background: #00000020;
 }

@@ -3,9 +3,9 @@ import PageTitle from '../../components/layout/PageTitle'
 
 const Home = props => (
     <div className="Home">
-        <PageTitle error
-            title="404"
-            subtitle="Opss... Página Não Encontrada!" />
+        <PageTitle
+            title="Módulo Hooks"
+            subtitle="Hooks são uma nova adição ao React 16.8." />
     </div>
 )
 
